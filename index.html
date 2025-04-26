@@ -7,30 +7,34 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fdfaf5;
-      color: #333;
-      padding: 20px;
-      text-align: center;
       background: linear-gradient(to bottom, #000000, #d4af37);
       color: #fff;
+      padding: 20px;
+      text-align: center;
       overflow: hidden;
+      min-height: 100vh;
+      position: relative;
     }
+
     .card {
-      background-color: rgba(255, 255, 255, 0.05);
+      background-color: rgba(255, 255, 255, 0.1);
       padding: 30px;
       border-radius: 15px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       max-width: 600px;
-      margin: auto;
+      margin: 80px auto 0 auto;
     }
+
     h1, h2 {
       margin: 0.3em 0;
     }
+
     .tamu {
       font-size: 1.2em;
       margin-bottom: 20px;
       font-style: italic;
     }
+
     .info {
       margin-top: 20px;
       font-size: 1em;
@@ -39,29 +43,31 @@
     /* Bunga animasi */
     .flower {
       position: absolute;
-      width: 50px;
-      height: 50px;
-      background-image: url(https://images.app.goo.gl/1xaS5XpYqaC24D127); /* Ganti URL ini dengan link gambar bunga yang sesuai */
+      width: 40px;
+      height: 40px;
+      background-image: url('https://i.ibb.co/8zLkSYv/flower.png');
       background-size: cover;
-      animation: moveFlower 10s linear infinite;
+      opacity: 0.7;
+      animation: moveFlower 20s linear infinite;
     }
 
     /* Gerakan bunga */
     @keyframes moveFlower {
       0% {
-        transform: translateX(-100px) translateY(0);
+        transform: translateY(-100px) translateX(0);
       }
       100% {
-        transform: translateX(100vw) translateY(100vh);
+        transform: translateY(110vh) translateX(20px);
       }
     }
 
-    /* Posisi bunga di berbagai tempat */
-    .flower1 { top: 10%; left: 10%; animation-delay: 0s; }
-    .flower2 { top: 20%; left: 80%; animation-delay: 2s; }
-    .flower3 { top: 50%; left: 30%; animation-delay: 4s; }
-    .flower4 { top: 70%; left: 60%; animation-delay: 6s; }
-    .flower5 { top: 90%; left: 20%; animation-delay: 8s; }
+    /* Posisi bunga random */
+    .flower1 { left: 10%; animation-delay: 0s; }
+    .flower2 { left: 30%; animation-delay: 5s; }
+    .flower3 { left: 50%; animation-delay: 10s; }
+    .flower4 { left: 70%; animation-delay: 15s; }
+    .flower5 { left: 90%; animation-delay: 3s; }
+
   </style>
 </head>
 <body>
