@@ -13,6 +13,7 @@
       text-align: center;
       background: linear-gradient(to bottom, #000000, #d4af37);
       color: #fff;
+      overflow: hidden;
     }
     .card {
       background-color: rgba(255, 255, 255, 0.05);
@@ -34,9 +35,42 @@
       margin-top: 20px;
       font-size: 1em;
     }
+
+    /* Bunga animasi */
+    .flower {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-image: url(https://images.app.goo.gl/1xaS5XpYqaC24D127); /* Ganti URL ini dengan link gambar bunga yang sesuai */
+      background-size: cover;
+      animation: moveFlower 10s linear infinite;
+    }
+
+    /* Gerakan bunga */
+    @keyframes moveFlower {
+      0% {
+        transform: translateX(-100px) translateY(0);
+      }
+      100% {
+        transform: translateX(100vw) translateY(100vh);
+      }
+    }
+
+    /* Posisi bunga di berbagai tempat */
+    .flower1 { top: 10%; left: 10%; animation-delay: 0s; }
+    .flower2 { top: 20%; left: 80%; animation-delay: 2s; }
+    .flower3 { top: 50%; left: 30%; animation-delay: 4s; }
+    .flower4 { top: 70%; left: 60%; animation-delay: 6s; }
+    .flower5 { top: 90%; left: 20%; animation-delay: 8s; }
   </style>
 </head>
 <body>
+  <div class="flower flower1"></div>
+  <div class="flower flower2"></div>
+  <div class="flower flower3"></div>
+  <div class="flower flower4"></div>
+  <div class="flower flower5"></div>
+
   <div class="card">
     <div class="tamu" id="namaTamu">Kepada Yth. Bapak/Ibu ...</div>
     <h1>Pernikahan</h1>
@@ -51,9 +85,9 @@
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     const nama = urlParams.get('to');
-    if(nama) {
+    if (nama) {
       document.getElementById('namaTamu').textContent = `Kepada Yth. ${decodeURIComponent(nama)}`;
     }
   </script>
 </body>
-  </html>
+</html>
