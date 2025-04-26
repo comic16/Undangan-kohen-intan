@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Pernikahan Kohen & Intan</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfaf5;
+      color: #333;
+      padding: 20px;
+      text-align: center;
+      background: linear-gradient(to bottom, #000000, #d4af37);
+      color: #fff;
+    }
+    .card {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      max-width: 600px;
+      margin: auto;
+    }
+    h1, h2 {
+      margin: 0.3em 0;
+    }
+    .tamu {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .info {
+      margin-top: 20px;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="tamu" id="namaTamu">Kepada Yth. Bapak/Ibu ...</div>
+    <h1>Pernikahan</h1>
+    <h2>Kohen & Intan</h2>
+    <div class="info">
+      <p>25 Maret 2026</p>
+      <p>Pukul 08.00 WIB - Selesai</p>
+      <p>Rumah mempelai wanita, Dungun Laut</p>
+    </div>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const nama = urlParams.get('to');
+    if(nama) {
+      document.getElementById('namaTamu').textContent = `Kepada Yth. ${decodeURIComponent(nama)}`;
+    }
+  </script>
+</body>
+  </html>
